@@ -98,6 +98,7 @@ angular.module('filtersApp.filters.controller',[])
 
 
     scope.reset = function(){
+        scope.results = []
         scope.filterObject = {
 
             uResume: null,
