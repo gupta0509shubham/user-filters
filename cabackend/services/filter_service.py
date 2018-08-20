@@ -18,7 +18,7 @@ class FiltersService(object):
         if filters.get('uSkills') is not None:
             data = data.filter(skills__contains=filters.get('uSkills'))
         if filters.get('uPLocations') is not None:
-            data = data.filter(preferred_location=filters.get('uPLocations'))
+            data = data.filter(preferred_location__in=filters.get('uPLocations'))
         if filters.get('uCtc') is not None:
             data = data.filter(ctc=filters.get('uCtc'))
         x = []
