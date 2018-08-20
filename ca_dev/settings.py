@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'ca_dev.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbp0lm3k62omce',
-        'USER': 'xiyfjssvwlraoe',
-        'PASSWORD': 'ea1e8ec77fd9e460274477a1601802a31a0375347e9f83ed7dff39a94e1faf05',
-        'HOST': 'ec2-54-243-59-122.compute-1.amazonaws.com',
+        'NAME': 'filters_db',
+        'USER': 'csuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
         'PORT': '5432',
         'TEST': {
             'NAME': 'aniyus',  # django_model_testdb

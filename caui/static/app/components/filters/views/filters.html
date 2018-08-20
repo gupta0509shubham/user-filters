@@ -56,8 +56,9 @@
                 	</div>
                 </div>
 				<div class="filters-result row">
+                    <a id="downloadAnchorElem" style="display:none"></a>
                 	<div class="col-md-12">              		
-                        <div ng-repeat="data in $filtersCtrl.results">
+                        <div ng-repeat="data in $filtersCtrl.results" ng-click="$filtersCtrl.downloadDetails(data)">
                             <div class="col-md-2">   
                                 {{data.resume}}                                     
                             </div>
