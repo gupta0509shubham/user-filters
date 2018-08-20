@@ -17,5 +17,7 @@ def query_user_details(request):
             result = filter_object.query_user_details(filters=filters)
         return HttpResponse(json.dumps(result, cls=DjangoJSONEncoder), content_type="application/json", status=200)
     except Exception as error:
-        print error
-        return HttpResponse(json.dumps({}, cls=DjangoJSONEncoder), content_type="application/json", status=500)
+        error_json = {
+            "status": False
+        }
+        return HttpResponse(json.dumps(error_json, cls=DjangoJSONEncoder), content_type="application/json", status=500)
