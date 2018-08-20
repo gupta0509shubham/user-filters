@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f39f11f4-2e51-4fd4-9024-5d37e6fefa13" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caui/static/app/components/filters/views/filters.html" afterPath="$PROJECT_DIR$/caui/static/app/components/filters/views/filters.html" />
-    </list>
+    <list default="true" id="f39f11f4-2e51-4fd4-9024-5d37e6fefa13" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
