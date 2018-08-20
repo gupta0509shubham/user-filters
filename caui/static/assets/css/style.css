@@ -1,0 +1,35 @@
+.main-container {
+
+	border : 2px solid #EAE8DC;
+	padding: 0px 25px 10px 25px;
+	margin-top: 20px;
+	border-radius: 5px;
+
+}
+
+.filters-container {
+
+	border : 2px solid #EAE8DC;
+	padding: 10px;
+  border-radius: 5px;
+
+}
+
+.filters-result {
+
+	border : 2px solid #EAE8DC;
+	padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+
+}
+
+.apply-btn {
+	float: right;
+	margin-top: 10px
+}
+
+.col-md-2 {
+
+	margin-top: 5px;
+}

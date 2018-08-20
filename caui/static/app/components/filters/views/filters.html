@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="main-container">
+                <div class="header">
+                    <h3>Filter Users</h3>
+                </div>
+                <div class="filters-container row">
+                	<div class="col-md-2"> 
+                		<label>Resume</label>
+						        <md-select ng-model="$filtersCtrl.filterObject.uResume" placeholder="Resume" class="md-no-underline">
+						          <md-option value="true">Yes</md-option>
+						          <md-option value="false">No</md-option>
+						        </md-select>               		              		
+                	</div>
+                	<div class="col-md-2">
+                		<label>Location</label>
+						        <md-select ng-model="$filtersCtrl.filterObject.uLocations" placeholder="Location" class="md-no-underline" multiple>
+						          <md-option ng-repeat="loc in $filtersCtrl.locations" ng-value="loc">
+					              {{loc}}
+					            </md-option>
+						        </md-select>
+                	</div>
+                	<div class="col-md-2">
+                		<label>Experience</label>
+						        <md-select ng-model="$filtersCtrl.filterObject.uExperience" placeholder="Experience" class="md-no-underline">
+						          <md-option ng-repeat="exp in $filtersCtrl.experience" ng-value="exp">
+					              {{exp}}
+					            </md-option>
+						        </md-select>
+                	</div>
+                	<div class="col-md-2">
+                		<label>Preffered Location</label>
+						        <md-select ng-model="$filtersCtrl.filterObject.uPLocations" placeholder="Preffered Location" class="md-no-underline" multiple>
+						          <md-option ng-repeat="pLoc in $filtersCtrl.pLocations" ng-value="pLoc">
+					              {{pLoc}}
+					            </md-option>
+						        </md-select>
+                	</div>
+                	<div class="col-md-2">
+                		<label>Skills</label>
+						        <md-select ng-model="$filtersCtrl.filterObject.uSkills" placeholder="Skills" class="md-no-underline" multiple>
+						          <md-option ng-repeat="skill in $filtersCtrl.skills" ng-value="skill">
+					              {{skill}}
+					            </md-option>
+						        </md-select>
+                	</div>
+                	<div class="col-md-2">
+	                	<label>CTC</label>
+    					<md-input-container class="md-block">
+    						<input type="number" step="any" name="ctc" ng-model="$filtersCtrl.filterObject.uCtc""/>
+    					</md-input-container>
+                	</div>
+                	<div class="col-md-12">
+                		<input type="button" name="apply" value="Apply" class="btn btn-primary apply-btn" ng-click="$filtersCtrl.getRecords()"> 
+                	</div>
+                </div>
+				<div class="filters-result row">
+                	<div class="col-md-12">              		
+                        <div ng-repeat="data in $filtersCtrl.results">
+                            <div class="col-md-2">   
+                                {{data.resume}}                                     
+                            </div>
+                            <div class="col-md-2">
+                                {{data.current_location}}
+                            </div>
+                            <div class="col-md-2">
+                                {{data.work_experience}}
+                            </div>
+                            <div class="col-md-2">
+                                {{data.preferred_location}}
+                            </div>
+                            <div class="col-md-2">
+                                <span ng-repeat="skill in data.skills">
+                                    {{skill}}
+                                </span>
+                            </div>
+                            <div class="col-md-2">
+                                {{data.ctc}}
+                            </div>                        
+                        </div>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
