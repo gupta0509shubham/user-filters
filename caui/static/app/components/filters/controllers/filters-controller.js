@@ -3,6 +3,8 @@ angular.module('filtersApp.filters.controller',[])
 
     var scope = this;
 
+    scope.fresh = true;
+
     scope.results = []
 
     scope.locations = [
@@ -95,8 +97,23 @@ angular.module('filtersApp.filters.controller',[])
     }
 
 
-    scope.getRecords = function(){
+    scope.reset = function(){
+        scope.filterObject = {
 
+            uResume: null,
+            uLocations: null,
+            uExperience: null,
+            uPLocations: null,
+            uSkills: null,
+            uCtc    : null
+
+        }        
+    }
+
+
+    scope.getRecords = function(){
+        scope.fresh = false;
+        scope.results = [];
     	var success = function(response){
             scope.results = response.data;
     	}
@@ -113,11 +130,30 @@ angular.module('filtersApp.filters.controller',[])
     }
 
     scope.downloadDetails = function(obj){   
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+        var csvData = convertToCSV([obj])
+        var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvData);
         var dlAnchorElem = document.getElementById('downloadAnchorElem');
         dlAnchorElem.setAttribute("href",     dataStr     );
-        dlAnchorElem.setAttribute("download", obj.name+".json");
+        dlAnchorElem.setAttribute("download", obj.name+".csv");
         dlAnchorElem.click();
+    }
+
+    function convertToCSV(objArray) {
+        var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+        var str = '';
+
+        for (var i = 0; i < array.length; i++) {
+            var line = '';
+            for (var index in array[i]) {
+                if (line != '') line += ','
+
+                line += array[i][index];
+            }
+
+            str += line + '\r\n';
+        }
+
+        return str;
     }
 
     return scope;

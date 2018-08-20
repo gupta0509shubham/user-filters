@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f39f11f4-2e51-4fd4-9024-5d37e6fefa13" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cabackend/services/filter_service.py" afterPath="$PROJECT_DIR$/cabackend/services/filter_service.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caui/static/app/components/filters/views/filters.html" afterPath="$PROJECT_DIR$/caui/static/app/components/filters/views/filters.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="filter_ctrl.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="filter_ctrl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cabackend/controllers/filter_ctrl.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
@@ -25,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filter_service.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="filter_service.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cabackend/services/filter_service.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
@@ -640,22 +640,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cabackend/controllers/filter_ctrl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cabackend/services/filter_service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cabackend/controllers/filter_ctrl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,8 +9,8 @@
                 	<div class="col-md-2"> 
                 		<label>Resume</label>
 						        <md-select ng-model="$filtersCtrl.filterObject.uResume" placeholder="Resume" class="md-no-underline">
-						          <md-option value="true">Yes</md-option>
-						          <md-option value="false">No</md-option>
+						          <md-option value="true">True</md-option>
+						          <md-option value="false">False</md-option>
 						        </md-select>               		              		
                 	</div>
                 	<div class="col-md-2">
@@ -52,15 +52,21 @@
     					</md-input-container>
                 	</div>
                 	<div class="col-md-12">
+                        <input type="button" name="apply" value="Reset" class="btn btn-default apply-btn m-l-10" ng-click="$filtersCtrl.reset()"> 
                 		<input type="button" name="apply" value="Apply" class="btn btn-primary apply-btn" ng-click="$filtersCtrl.getRecords()"> 
                 	</div>
                 </div>
 				<div class="filters-result row">
                     <a id="downloadAnchorElem" style="display:none"></a>
+                    <div class="col-md-12" ng-if="$filtersCtrl.fresh">
+                        <p class="center">
+                            Please apply filters to fetch records.
+                        </p>
+                    </div>
                 	<div class="col-md-12">              		
                         <div ng-repeat="data in $filtersCtrl.results" ng-click="$filtersCtrl.downloadDetails(data)">
                             <div class="col-md-2">   
-                                {{data.resume}}                                     
+                                {{data.resume ? 'TRUE': 'FALSE'}}                                     
                             </div>
                             <div class="col-md-2">
                                 {{data.current_location}}
